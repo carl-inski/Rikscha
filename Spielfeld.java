@@ -60,17 +60,17 @@ public class Spielfeld {
                 }
             }
     
-            // Ausgabe der Zahlen 1-16 daneben
+             // Ausgabe der Zahlen 1-16 daneben
             if (i == 0) {
-                System.out.print("   1    2    3    4    5");
+                System.out.print("   0    1    2    3    4");
             } else if (i == 1) {
-                System.out.print("  16                   6");
+                System.out.print("  15                   5");
             } else if (i == 2) {
-                System.out.print("  15                   7");
+                System.out.print("  14                   6");
             } else if (i == 3) {
-                System.out.print("  14                   8");
+                System.out.print("  13                   7");
             } else if (i == 4) {
-                System.out.print("  13   12   11   10    9");
+                System.out.print("  12    11   10   9    8");
             }
     
             System.out.println(); // Leerzeile einfügen
