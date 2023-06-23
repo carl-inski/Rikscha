@@ -52,10 +52,31 @@ public class communication {
         return ausgabe.toString();
     }
 
+    public String getGültige() {
+        Feld.istGueltig();
+
+                StringBuilder optionenZeile = new StringBuilder();
+                boolean ersteOption = true;
+                for (int i = 0; i < Feld.kartenFelder.length; i++) {
+                    if (Feld.getKarte(i).isGueltig()) {
+                        if (!ersteOption) {
+                            optionenZeile.append(",");
+                            }   
+                        optionenZeile.append(i);
+                        ersteOption = false;
+                    }
+                }
+
+        return optionenZeile.toString();
+    }
+
     public static void main(String[] args) {
         communication spiel = new communication();
         spiel.Feld.printSpielfeld();
-        spiel.frontendEingabe("1,1");
+        System.out.println(spiel.getGültige());
+        spiel.frontendEingabe("15,1");
+        spiel.Feld.printSpielfeld();
+        System.out.println(spiel.getGültige());
 
     }
 
